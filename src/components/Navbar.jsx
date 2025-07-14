@@ -7,9 +7,7 @@ import logo from '../assets/serenoxlogo.png';
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const { currentUser, isAdminUser, logout } = useAuth();
-  const location = useLocation();
-
+    const location = useLocation();
   const handleNav = () => {
     setNav(!nav);
   };
@@ -18,29 +16,24 @@ export const Navbar = () => {
     if (window.confirm('Are you sure you want to log out?')) {
       try {
         await logout();
-        window.location.href = '/home'; // Redirect to homepage
+                window.location.href = '/home'; // Redirect to homepage
       } catch (error) {
         console.error("Error logging out:", error);
       }
     }
   };
-
   const handleMobileLogout = async () => {
     handleNav();
     await handleLogout();
   };
-
   const navLinks = [
     { path: "/home", label: "Home", icon: <FaHome className="mr-3" /> },
     { path: "/about", label: "About", icon: <FaInfoCircle className="mr-3" /> },
     { path: "/news", label: "News", icon: <FaNewspaper className="mr-3" /> },
     { path: "/contact", label: "Contact", icon: <FaEnvelope className="mr-3" /> },
-  ];
-
-  if (currentUser && isAdminUser) {
+  ];  if (currentUser && isAdminUser) {
     navLinks.push({ path: "/dashboard/articles", label: "Dashboard", icon: <FaTachometerAlt className="mr-3" /> });
   }
-
   return (
     <div className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,8 +44,7 @@ export const Navbar = () => {
               <img src={logo} alt="Serenox Logo" className="h-32" />
             </Link>
           </div>
-
-          {/* Desktop Menu */}
+                    {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
@@ -89,9 +81,7 @@ export const Navbar = () => {
               <option value="si">සිංහල</option>
               <option value="ta">தமிழ்</option>
             </select>
-          </div>
-
-          {/* Mobile Menu Icon */}
+          </div>          {/* Mobile Menu Icon */}
           <div className="md:hidden flex items-center">
             <button onClick={handleNav} className="text-gray-800">
               {nav ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
@@ -101,7 +91,7 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
+            <div
         className={`md:hidden ${nav ? 'block' : 'hidden'} absolute top-20 left-0 w-full bg-white shadow-lg z-40`}
       >
         <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -120,7 +110,7 @@ export const Navbar = () => {
         </ul>
         <div className="pt-4 pb-3 border-t border-gray-200">
           {currentUser ? (
-            <div className="px-4 space-y-3">
+                        <div className="px-4 space-y-3">
               <p className="text-gray-600">{currentUser.email}</p>
               <button
                 onClick={handleMobileLogout}
@@ -131,7 +121,7 @@ export const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="px-4">
+                       <div className="px-4">
               <Link
                 to="/login"
                 onClick={handleNav}
@@ -142,7 +132,7 @@ export const Navbar = () => {
               </Link>
             </div>
           )}
-          <div className="mt-4 px-4">
+                    <div className="mt-4 px-4">
             <select
               className="w-full py-2 px-3 bg-gray-100 text-gray-800 rounded-lg"
               onChange={(e) => console.log("Selected language:", e.target.value)}
@@ -156,4 +146,4 @@ export const Navbar = () => {
       </div>
     </div>
   );
-};
+  };

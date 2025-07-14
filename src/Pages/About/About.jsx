@@ -1,10 +1,10 @@
+
 import React from 'react';
 import { FaBullseye, FaEye, FaUsers } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 export const About = () => {
-  const navigate = useNavigate();
-
+    const navigate = useNavigate();
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Hero Section */}
@@ -16,7 +16,6 @@ export const About = () => {
           </p>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +28,6 @@ export const About = () => {
                 To empower individuals and families with accurate, accessible, and empathetic information on sex education, maternal health, and child counseling. We believe knowledge is key to making informed decisions and fostering healthier communities.
               </p>
             </div>
-
             {/* Our Vision */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
               <FaEye className="text-5xl text-accent mx-auto mb-6" />
@@ -54,5 +52,5 @@ export const About = () => {
         </div>
       </div>
     </div>
-  );
+      );
 };

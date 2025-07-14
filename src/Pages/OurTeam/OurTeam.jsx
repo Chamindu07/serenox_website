@@ -1,9 +1,6 @@
+import { FacebookAuthProvider } from 'firebase/auth/web-extension';
 import React from 'react';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
-import sithumiImage from '../../assets/sithumi.jpg';
-import chaminduuuImage from '../../assets/chaminduuu.jpg';
-import madhaviImage from '../../assets/madhavi.jpg';
-import tharakaImage from '../../assets/tharaka.jpg';
 
 // Placeholder data for team members
 const teamMembers = [
@@ -11,7 +8,7 @@ const teamMembers = [
     name: 'Mr.Tharaka Gimhan',
     role: 'Leader/Developer',
     bio: 'Undergraduate,BHSc(Hons)in HICT(GWU)',
-    imageUrl: tharakaImage, // Replace with actual image URL
+    imageUrl: '', // Replace with actual image URL
     social: {
       linkedin: '#',
       github: '#',
@@ -22,7 +19,7 @@ const teamMembers = [
     name: 'Mis.Sithumi Nisansala',
     role: 'UI/UX Developer',
     bio: 'Undergraduate,BHSc(Hons)in HICT(GWU)',
-    imageUrl: sithumiImage, // Replace with actual image URL
+    imageUrl: 'https://via.placeholder.com/150', // Replace with actual image URL
     social: {
       linkedin: '#',
       github: '#',
@@ -33,7 +30,9 @@ const teamMembers = [
     name: 'Mis.Dasuni Uthpala',
     role: 'Developer',
     bio: 'Undergraduate,BHSc(Hons)in HICT(GWU)',
-    imageUrl: sithumiImage, // Replace with actual image URL
+
+    
+    imageUrl: 'https://via.placeholder.com/150', // Replace with actual image URL
     social: {
       linkedin: '#',
       github: '#',
@@ -46,7 +45,7 @@ const teamMembers = [
     name: 'Mr.Chamindu Sandeepa',
     role: 'UI/UX Designer,Web Developer',
     bio: 'Undergraduate,BHSc(Hons)in HICT(GWU)',
-    imageUrl: chaminduuuImage, // Replace with actual image URL
+    imageUrl: 'https://via.placeholder.com/150', // Replace with actual image URL
     social: {
       linkedin: '#',
       github: '#',
@@ -58,7 +57,7 @@ const teamMembers = [
     name: 'Mis.Gayani Madhavi',
     role: 'Developer',
     bio: 'Undergraduate,BHSc(Hons)in HICT(GWU)',
-    imageUrl: madhaviImage, // Replace with actual image URL
+    imageUrl: 'https://via.placeholder.com/150', // Replace with actual image URL
     social: {
       linkedin: '#',
       github: '#',

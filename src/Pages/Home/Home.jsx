@@ -10,12 +10,12 @@ import card_whatisebsite from "../Home/assets/card/2.png";
 import card_appdescription from "../Home/assets/card/4.png";
 
 export const Home = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+      <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <div className="w-full bg-white">
+          <div className="w-full bg-white">
         <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-12">
           <div className="text-center md:text-left">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
@@ -34,15 +34,15 @@ export const Home = () => {
                 className="text-primary"
               />
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">
+                 <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Comprehensive resources and expert guidance for a healthier, informed life.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <button
                 disabled
-                className="bg-primary text-white font-bold py-4 px-8 rounded-lg shadow-lg flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 opacity-50 cursor-not-allowed"
+                                className="bg-primary text-white font-bold py-4 px-8 rounded-lg shadow-lg flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 opacity-50 cursor-not-allowed"
               >
-                <FaApple className="mr-3" size={28} />
+                              <FaApple className="mr-3" size={28} />
                 <div>
                   <p className="text-xs">Download on the</p>
                   <p className="text-lg font-semibold">App Store</p>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export const Contact = () => {
-  const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,8 +21,7 @@ export const Contact = () => {
           </p>
         </div>
       </div>
-
-      {/* Contact Form and Info */}
+   {/* Contact Form and Info */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -85,7 +84,7 @@ export const Contact = () => {
                 <p className="text-lg text-gray-600">Gampaha Wickramarachchi University, Kandy Rd, Yakkala</p>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-8">
+                        <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-3xl font-bold mb-4 text-gray-800">Follow Us</h2>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-600 hover:text-primary transition duration-300"><FaFacebook size={32} /></a>
@@ -106,12 +105,11 @@ export const Contact = () => {
             <button
               onClick={() => setShowPopup(false)}
               className="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300"
-            >
-              Close
+            >  Close
             </button>
-          </div>
+               </div>
         </div>
-      )}
+          )}
     </div>
-  );
+      );
 };

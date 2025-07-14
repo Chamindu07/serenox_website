@@ -16,7 +16,7 @@ export const Fotbar = () => {
         {/* Company Info */}
         <div className="lg:col-span-1">
           <Link to="/home">
-            <img src={logo} alt="Serenox Logo" className="h-24 mb-4" />
+            <img src={logo} alt="Serenox Logo" className="h-20 mb-4" />
           </Link>
           <p className="text-sm mb-4">
             Empowering health education through comprehensive resources and compassionate guidance.
